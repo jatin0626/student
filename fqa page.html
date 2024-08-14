@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fqa.css">
+    <title>FAQ Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq {
+            list-style: none;
+            padding: 0;
+        }
+
+        .faq li {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #eee;">Frequently Asked Questions</h1>
+        <ul class="faq">
+            <li>
+                <div class="question">What is this website about?</div>
+                <div class="answer">This website is dedicated to providing information and resources related to [website topic].</div>
+            </li>
+            <li>
+                <div class="question">How can I contact you?</div>
+                <div class="answer">You can reach us through [contact information] or by filling out the contact form on the [contact page link].</div>
+            </li>
+            <li>
+                <div class="question">Is there a fee to use this website?</div>
+                <div class="answer">[Answer about fees, if any].</div>
+            </li>
+            <li>
+                <div class="question">What is your privacy policy?</div>
+                <div class="answer">You can find our privacy policy at [privacy policy link].</div>
+            </li>
+            <li>
+                <div class="question">Are there any other questions I should ask?</div>
+                <div class="answer">If you have any other questions, please feel free to ask! We are happy to help.</div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
